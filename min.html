@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Min</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Nhập số phần tử của mảng"));
+    let arr1 = [];
+    let minn;
+    for (let i = 0; i < n; i++) {
+        arr1[i] = Math.floor(Math.random() * n - n/2)
+    }
+    document.writeln("arr1: "+arr1+"<br/>");
+
+    function Min(arr) {
+        if (arr.length === 0) {
+            return -1
+        } else {
+            minn = arr[0];
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] < minn) {
+                    minn = arr[i]
+                }
+            }
+            return minn
+        }
+    }
+
+    let k = Min(arr1);
+    document.write("Min: "+k);
+</script>
+</body>
+</html>
